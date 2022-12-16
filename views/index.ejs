@@ -1,0 +1,18 @@
+<div class="container mt-3">
+  <h1>Homepage</h1>
+
+  <h2>Hi, <%= nama %></h2>
+  <br>
+
+  <h4>Daftar Mahasiswa</h4>
+  <% if (mahasiswa.length < 1) { %>
+    <p>Daftar Mahasiswa Tidak Ada</p>
+  <% } else { %>
+    <% mahasiswa.forEach(mhs => { %>
+    <ul>
+      <li>Nama: <%= mhs.nama %></li>
+      <li>Email: <%= mhs.email %></li>
+    </ul>
+    <% }) %>
+  <% } %>
+</div>
